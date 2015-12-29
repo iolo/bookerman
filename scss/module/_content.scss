@@ -1,0 +1,19 @@
+// ------------------------------------- //
+// Style of Content
+// ------------------------------------- //
+
+$module: 'content';
+
+.#{$module} {
+    @include position(absolute, top 115px right 0 bottom 0 left 260px);
+    color: $gray-dark;
+
+    &--extend {
+        left: 16px;
+    }
+
+    &__inner {
+        @include size(100%);
+        position: relative;
+    }
+}

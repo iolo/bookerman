@@ -1,0 +1,55 @@
+// ------------------------------------- //
+// Style of TimeGutter
+// ------------------------------------- //
+
+$module: 'time-gutter';
+
+.#{$module} {
+    @include size(50px, 100%);
+    border-right: 1px solid $gray-lighter;
+    float: left;
+    font-weight: 200;
+    color: $gray-light;
+    overflow: hidden;
+
+    &__inner {
+        padding-top: 95px;
+        height: inherit;
+    }
+
+    &__times {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 100%;
+    }
+
+    &__time {
+        position: relative;
+
+        &--current {
+            color: $brand-primary;
+        }
+    }
+
+    &__text {
+        @include size(100%, auto);
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        text-align: center;
+        z-index: 1020;
+    }
+
+    &__indicator {
+        @include size(40px);
+        background: $gray-lightest;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 1010;
+    }
+}

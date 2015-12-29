@@ -1,0 +1,63 @@
+// ------------------------------------- //
+// Style of Timeline
+// ------------------------------------- //
+
+$module: 'timeline';
+
+.#{$module} {
+    @include size(100%);
+    overflow: hidden;
+
+    &__reservation {
+        @include size(auto, 100%);
+        float: left;
+        background: $gray-lightest;
+        position: relative;
+        border-right: 1px solid $gray-lighter;
+    }
+
+    &__times {
+        @include size(100%);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__time {
+        width: 100%;
+
+        a,
+        a:focus {
+            @include size(100%);
+            display: inline-block;
+            outline: none;
+        }
+    }
+
+    &__time:hover {
+        background: darken($gray-lightest, 2%);
+    }
+
+    &__time:nth-child(odd) {
+        border-bottom: 1px dashed $gray-lighter;
+    }
+
+    &__time:nth-child(even) {
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+    &__time:last-child {
+        border-bottom: 0 none;
+    }
+
+    &__details {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__detail {
+        @include size(100%, auto);
+        position: absolute;
+    }
+}

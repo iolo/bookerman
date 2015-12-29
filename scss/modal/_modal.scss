@@ -1,0 +1,44 @@
+// ------------------------------------- //
+// Style of Modal
+// ------------------------------------- //
+
+$module: 'modal';
+
+.#{$module} {
+    .modal-title {
+        font-size: 1.15em;
+        color: $brand-primary;
+        margin: 3px 0;
+    }
+
+    .modal-dialog {
+        @include size(600px, auto);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+    
+    .modal-footer {
+        background: $gray-lightest;
+        border-radius: 0 0 5px 5px;
+
+        button {
+            width: 75px;
+
+            &.text-primary {
+                color: $brand-primary;
+            }
+        }
+    }
+
+    .form-inline {
+        margin-bottom: 15px;
+    }
+
+    label,
+    span {
+        font-weight: 300;
+    }
+}

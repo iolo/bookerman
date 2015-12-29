@@ -1,0 +1,69 @@
+// ------------------------------------- //
+// Style of Front
+// ------------------------------------- //
+
+$module: 'front';
+
+.#{$module} {
+    color: $gray-lightest;
+    font-weight: 200;
+
+    &__background {
+        position: fixed;
+        width: 200%;
+        height: 200%;
+        left: -50%;
+        z-index: 1;
+
+        img {
+            display: block;
+            margin: auto;
+            min-height: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            min-width: 50%;
+        }
+    }
+
+    &__mask {
+        @include size(100%);
+        position: absolute;
+        z-index: 5;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .64) 99%, rgba(0, 0, 0, .65) 100%);
+    }
+
+    &__body {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 620px;
+        height: 152px;
+        margin: auto;
+        z-index: 10;
+    }
+
+    &__header {
+        text-shadow: 0 0 3px $gray-dark;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 7px;
+    }
+
+    &__description {
+        font-size: 1.3em;
+    }
+
+    &__admission {
+        text-align: center;
+
+        .btn {
+            width: 220px;
+        }
+    }
+}

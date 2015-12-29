@@ -1,0 +1,64 @@
+// ------------------------------------- //
+// Style of Popover
+// ------------------------------------- //
+
+$module: 'popover';
+
+.#{$module} {
+    @include size(230px, auto);
+    z-index: 1030;
+
+    &--hide-footer &__footer {
+        display: none;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 6px;
+    }
+
+    &__subject {
+        font-size: 1.08em;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+
+    &__description {
+        margin-bottom: 4px;
+        word-wrap: break-word;
+    }
+
+    &__details {
+        padding: 0;
+        margin: 0;
+        list-style: circle;
+        font-size: .95em;
+        color: $gray-light;
+    }
+    
+    &__detail {
+        margin-left: 14px;
+    }
+
+    &__detail:first-child {
+        float: left;
+        padding-right: 10px;
+        position: relative;
+
+        &:after {
+            content: '/';
+            position: absolute;
+            right: 3px;
+        }
+    }
+    
+    &__footer {
+        margin-top: 8px;
+
+        button {
+            padding: 5px 15px;
+            margin-right: 4px;
+        }
+    }
+}

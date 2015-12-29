@@ -1,0 +1,44 @@
+// ------------------------------------- //
+// Style of Reservation
+// ------------------------------------- //
+
+$module: 'modal-reservation';
+
+.#{$module} {
+    display: none;
+
+    &.show .modal {
+        display: block;
+    }
+
+    .form-group.straight {
+        span {
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        label {
+            width: 100%;
+        }
+    }
+
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+
+    .form-inline {
+        select,
+        span {
+            margin-right: 5px;
+        }
+
+        select {
+            width: auto;
+            display: inline-block;
+        }
+
+        label {
+            margin-bottom: 0;
+        }
+    }
+}

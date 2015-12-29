@@ -1,0 +1,278 @@
+/*
+
+ This file is part of the ZippyUI Framework
+
+ Copyright (c) 2011 ZippyUI.com
+
+ All rights reserved to zippyui.com
+ This software cannot be used/copied/distributed without the express permission from staff at zippyui.com
+
+ */
+.date-picker {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+.date-picker,
+.date-picker * {
+  box-sizing: border-box;
+}
+.date-picker .dp-footer {
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.date-picker .dp-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.date-picker .dp-table {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.date-picker .dp-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.date-picker .dp-cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.date-picker .dp-nav-table {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+}
+.date-picker .dp-nav-table .dp-cell {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7;
+  -ms-flex: 7;
+  flex: 7;
+}
+.date-picker .dp-nav-table .dp-nav-cell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.date-picker {
+  overflow: hidden;
+  background: #fff;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+}
+.date-picker .dp-header {
+  background: #eef0f6;
+}
+.date-picker .dp-header .dp-cell {
+  color: #5c5c66;
+}
+.date-picker .dp-header .dp-cell:hover {
+  background: inherit;
+}
+.date-picker .dp-table {
+  border-color: #aeaeae;
+}
+.date-picker .dp-table .dp-row {
+  border-top: 0 solid transparent;
+}
+.date-picker .dp-table .dp-row.dp-week-day-names {
+  background: #eef0f6;
+  border-bottom: 1px solid #dcdcdc;
+  border-top: none;
+  color: #5c5c66;
+}
+.date-picker .dp-table .dp-cell {
+  cursor: pointer;
+  padding: 0;
+  background: inherit;
+  border-radius: 4px;
+  margin: 2px;
+}
+.date-picker .dp-table .dp-cell:not(:first-child) {
+  border-left: 0 solid transparent;
+}
+.date-picker .dp-table .dp-cell.dp-prev,
+.date-picker .dp-table .dp-cell.dp-next {
+  color: #a6acba;
+  background: inherit;
+}
+.date-picker .dp-table .dp-cell.dp-in-range {
+  background: #e2f0ff;
+}
+.date-picker .dp-table .dp-cell:hover {
+  color: inherit;
+  background: #eef0f6;
+}
+.date-picker .dp-table .dp-cell.dp-disabled {
+  cursor: default;
+  color: #aeaeae;
+  background: inherit;
+}
+.date-picker .dp-table .dp-cell.dp-value {
+  color: #fff;
+  font-weight: normal;
+  background: #2e99eb;
+}
+.date-picker .dp-table .dp-cell.dp-current {
+  font-weight: bold;
+}
+.date-picker .dp-table .dp-cell.dp-in-range.dp-current,
+.date-picker .dp-table .dp-cell.dp-in-range.dp-value {
+  background: #e2f0ff;
+}
+.date-picker .dp-table .dp-cell.dp-month {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.date-picker .dp-table .dp-cell.dp-week-day-name {
+  cursor: default;
+  background: inherit;
+  border: none;
+}
+.date-picker .dp-footer {
+  padding: 3px;
+  justify-content: center;
+  border-top: 1px solid #aeaeae;
+}
+.date-picker .dp-footer .dp-footer-selected,
+.date-picker .dp-footer .dp-footer-today {
+  padding: 5px 15px;
+  border-width: 1px;
+  cursor: pointer;
+}
+.date-picker .dp-body {
+  overflow: hidden;
+}
+.date-picker .dp-cell {
+  outline: none;
+}
+.date-picker .dp-nav-view,
+.date-picker .dp-nav-cell,
+.date-picker .dp-week-day-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  touch-callout: none;
+  user-select: none;
+}
+.date-picker .dp-nav-view,
+.date-picker .dp-nav-cell {
+  cursor: pointer;
+}
+.date-picker .dp-nav-table .dp-nav-cell.dp-cell {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+.date-picker .dp-nav-table .dp-nav-cell.dp-cell.dp-prev-nav,
+.date-picker .dp-nav-table .dp-nav-cell.dp-cell.dp-next-nav {
+  color: #3280d9;
+}
+.date-picker .dp-nav-table .dp-nav-cell.dp-cell.dp-prev-nav:hover,
+.date-picker .dp-nav-table .dp-nav-cell.dp-cell.dp-next-nav:hover {
+  color: #2267b6;
+}
+.date-picker .dp-nav-table .dp-nav-cell.dp-cell.dp-next-nav {
+  text-align: right;
+}
+.date-picker .dp-nav-view {
+  background: inherit;
+}
+.date-picker .dp-nav-view:hover {
+  background: #eef0f6;
+}
+.date-picker .dp-nav-table .dp-cell {
+  padding: 8px;
+  font-weight: 400;
+}
+.date-picker .dp-nav-table .dp-nav-cell {
+  touch-callout: none;
+  user-select: none;
+}
+.date-picker .dp-decade-view,
+.date-picker .dp-year-view,
+.date-picker .dp-month-view {
+  touch-callout: none;
+  user-select: none;
+}
+.dp-cell {
+  font-weight: 200;
+}
+.dp-header .dp-nav-view.dp-cell {
+  cursor: default;
+}

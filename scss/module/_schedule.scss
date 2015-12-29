@@ -1,0 +1,28 @@
+// ------------------------------------- //
+// Style of Schedule
+// ------------------------------------- //
+
+$module: 'schedule';
+
+.#{$module} {
+    @include size(100%);
+    padding-left: 50px;
+
+    &__inner {
+        @include size(100%);
+        position: relative;
+    }
+
+    &__room-types {
+        @include size(100%, 95px);
+        border-bottom: 1px solid $gray-lighter;
+        color: lighten($brand-primary, 8%);
+    }
+
+    &__timeline {
+        width: 100%;
+        position: absolute;
+        top: 95px;
+        bottom: 0;
+    }
+}

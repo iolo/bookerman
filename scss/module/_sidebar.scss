@@ -1,0 +1,48 @@
+// ------------------------------------- //
+// Style of Sidebar
+// ------------------------------------- //
+
+$module: 'sidebar';
+
+.#{$module} {
+    @include size(260px, auto);
+    @include position(absolute, top 115px bottom 0 left 0);
+    border-right: 1px solid $gray-lighter;
+
+    &__inner {
+        @include size(100%);
+    }
+
+    &--minimal {
+        @include size(16px, auto);
+
+        .#{$module}__section {
+            display: none;
+        }
+    }
+
+    &__section {
+        @include size(245px, auto);
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        float: left;
+    }
+
+    &__splitter {
+        @include size(10px, 100%);
+        position: relative;
+        float: right;
+    }
+
+    &__splitter-handle {
+        @include position(absolute, top 0 right 0 bottom 0 left 0);
+        background: url('../img/icon_splitter.png') no-repeat left center;
+        background-size: 6px auto;
+        display: inline-block;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

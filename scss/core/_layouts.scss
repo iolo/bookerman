@@ -1,0 +1,40 @@
+// ------------------------------------- //
+// Style of Layouts
+// ------------------------------------- //
+
+html,
+body {
+    @include size(100%);
+    font-family: "Open Sans", sans-serif, Helvetica, AppleSDGothicNeo-Regular;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray;
+}
+
+.wrap {
+    @include size(100%);
+}
+
+a,
+a:focus {
+    color: $brand-primary;
+}
+
+a:hover,
+a:active {
+    color: darken($brand-primary, 10%);
+}
+
+.btn.btn-primary {
+    background: $brand-primary;
+}
+
+.btn.btn-primary:active {
+    background: darken($brand-primary, 10%);
+}
+
+.modal-backdrop {
+    opacity: .3;
+}

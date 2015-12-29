@@ -1,0 +1,20 @@
+%sp-bookerman {
+    background: url('../img/sp_bookerman.png') no-repeat;
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+
+    @media screen and (-webkit-min-device-pixel-ratio:1.5),
+        only screen and (-o-min-device-pixel-ratio: 3/2),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5){
+        background-image: url('../img/sp_bookerman_2x.png');
+        background-repeat: no-repeat;
+        background-size: 170px auto;
+    }
+}
+
+$sp-bookerman: (
+    spritesheet_name: sp-bookerman,
+    bg_empty: (offset_x: 0, offset_y: 0, width: 170px, height: 170px),
+);

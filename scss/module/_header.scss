@@ -1,0 +1,23 @@
+// ------------------------------------- //
+// Style of Header
+// ------------------------------------- //
+
+$module: 'header';
+
+.#{$module} {
+    @include size(100%, 115px);
+    border-bottom: 1px solid $gray-lighter;
+    text-align: center;
+    position: relative;
+
+    &__inner {
+        @include size(100%);
+    }
+
+    &__date-navi {
+        display: inline;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
