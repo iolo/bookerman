@@ -55,15 +55,21 @@ class ModalReservation extends React.Component {
      * @returns {ReactElement|XML}
      */
     render() {
-        const currentRoomFloor = this.props.values.get('floor');
-        const currentRoomName = this.props.values.get('name');
-        const currentRoomAlias = this.props.values.get('alias');
+        var currentRoomFloor = this.props.values.get('floor');
+        var currentRoomName = this.props.values.get('name');
+        var currentRoomAlias = this.props.values.get('alias');
         const startTime = moment({hour: this.props.start, minutes: 0});
         const endTime = moment({hour: this.props.end, minutes: 0});
         const selectedStartTime = moment(this.props.values.get('time'));
 
-        if (selectedStartTime) {
+        if (selectedStartTime.isValid()) {
             startTime.set({hour: selectedStartTime.hour(), minutes: selectedStartTime.minutes()});
+        }
+
+        if (currentRoomFloor === 0) {
+            currentRoomFloor = this.props.rooms[0].floor;
+            currentRoomName = this.props.rooms[0].name;
+            currentRoomAlias = this.props.rooms[0].alias;
         }
 
         return (
