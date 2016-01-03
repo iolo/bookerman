@@ -27,7 +27,7 @@ function authenticate(nextState, replaceState, next) {
             permissionVerified = true;
 
             return calendars.findAll().then((calendarList) => {
-                const calendar = calendarList.some((c) => c.summary === config.CALENDAR_ID);
+                const calendar = calendarList.some((c) => c.id === config.CALENDAR_ID);
 
                 if (!calendar) {
                     throw Error('access denied');
