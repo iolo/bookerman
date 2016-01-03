@@ -31,7 +31,7 @@ const events = {
                 maxResults: 300,
                 timeMin: timeMin,
                 timeMax: timeMax,
-                timeZone: 'Asia/Seoul',
+                timeZone: config.TIMEZONE,
                 orderBy: 'startTime'
             }).execute(function(events) {
                 events = events.items.filter((event) => {
@@ -67,11 +67,11 @@ const events = {
                     location: event.location,
                     start: {
                         dateTime: startTime,
-                        timeZone: 'Asia/Seoul'
+                        timeZone: config.TIMEZONE
                     },
                     end: {
                         dateTime: endTime,
-                        timeZone: 'Asia/Seoul'
+                        timeZone: config.TIMEZONE
                     },
                     attendees: event.attendees.map(email => {return {email}; }),
                     reminders: {
