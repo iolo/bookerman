@@ -7,7 +7,7 @@ import ACTIONS from '../../../actions';
 import {dispatch} from '../../../dispatcher';
 import DatePicker from 'react-date-picker';
 import Section from './section';
-import Splitter from './Splitter';
+import Splitter from './splitter';
 
 class Sidebar extends React.Component {
 
