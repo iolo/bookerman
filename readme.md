@@ -1,3 +1,7 @@
+# Bookerman
+
+This repository is **deprecated** because i have begun similar project
+
 Initialize
 --------------------
 0. Google API 활성화
