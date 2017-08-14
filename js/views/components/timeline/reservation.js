@@ -37,7 +37,7 @@ class Reservation extends React.Component {
         timeRange.push(endTime.format('HH:mm'));
 
         return (
-            <div className="timeline__reservation" style={{width: this.props.widthRatio}}>
+            <div className="timeline__reservation">
                 <h3 className="blind">{roomName}</h3>
                 <ul className="timeline__times">{timeline}</ul>
                 <h3 className="blind">예약 상세 내역</h3>
@@ -66,26 +66,24 @@ class Reservation extends React.Component {
 
 /**
  * Reservation의 Props 인터페이스 정의
- * @property {number} floor
+ * @property {number|string} floor
  * @property {string} name
  * @property {string} alias
  * @property {Immutable.List} events
  * @property {Immutable.Map} profile
  * @property {number} start
  * @property {number} end
- * @property {string} widthRatio
  * @property {?function} onClickReservation
  * @property {?function} onClickTime
  */
 Reservation.propTypes = {
-    floor: React.PropTypes.number.isRequired,
+    floor: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]).isRequired,
     name: React.PropTypes.string.isRequired,
     alias: React.PropTypes.string.isRequired,
     events: React.PropTypes.object.isRequired,
     profile: React.PropTypes.object.isRequired,
     start: React.PropTypes.number.isRequired,
     end: React.PropTypes.number.isRequired,
-    widthRatio: React.PropTypes.string.isRequired,
     onClickReservation: React.PropTypes.func,
     onClickTime: React.PropTypes.func
 };

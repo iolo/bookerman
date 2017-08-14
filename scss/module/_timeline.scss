@@ -9,7 +9,7 @@ $module: 'timeline';
     overflow: hidden;
 
     &__reservation {
-        @include size(auto, 100%);
+        @include size(200px, 100%);
         float: left;
         background: $gray-lightest;
         position: relative;

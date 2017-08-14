@@ -40,7 +40,6 @@ class Timeline extends React.Component {
     render() {
         const totalRoomCount = this.props.rooms.length;
         const reservations = this.props.rooms.map((room, index) => {
-            const widthRatio = Math.floor(1 / totalRoomCount * 10000) / 100 + '%';
             const events = this.props.events.filter((event) => {
                 const location = event.get('location');
                 const isSameFloor = new RegExp('^' + room.floor, 'g');
@@ -62,7 +61,6 @@ class Timeline extends React.Component {
                     start={this.props.start}
                     end={this.props.end}
                     events={events}
-                    widthRatio={widthRatio}
                     onClickReservation={this._onClickReservation.bind(this)}
                     onClickTime={this._onClickTime.bind(this)}
                 />
@@ -70,7 +68,7 @@ class Timeline extends React.Component {
         });
 
         return (
-            <div className="timeline">
+            <div className="timeline" style={{width: `${totalRoomCount * 200}px`}}>
                 <h2 className="blind">회의실 예약 현황</h2>
                 {reservations}
             </div>

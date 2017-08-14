@@ -10,7 +10,7 @@ class RoomType extends React.Component {
         const roomName = `${this.props.name}(${this.props.alias})`;
 
         return (
-            <li className="room-types__item" style={{width: this.props.widthRatio}}>
+            <li className="room-types__item">
                 <p className="room-types__name ellipsis">
                     <a href="#" title={roomName}>{roomName}</a>
                 </p>
@@ -27,8 +27,7 @@ class RoomType extends React.Component {
  */
 RoomType.propTypes = {
     name: React.PropTypes.string.isRequired,
-    alias: React.PropTypes.string.isRequired,
-    widthRatio: React.PropTypes.string.isRequired
+    alias: React.PropTypes.string.isRequired
 };
 
 /**

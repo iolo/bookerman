@@ -11,11 +11,11 @@ $module: 'schedule';
     &__inner {
         @include size(100%);
         position: relative;
+        overflow: scroll;
     }
 
     &__room-types {
         @include size(100%, 95px);
-        border-bottom: 1px solid $gray-lighter;
         color: lighten($brand-primary, 8%);
     }
 

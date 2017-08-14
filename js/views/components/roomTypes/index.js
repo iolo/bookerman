@@ -22,21 +22,18 @@ class RoomTypes extends React.Component {
 
         cols = Object.keys(floors).map((key) => {
             var currentRoomCount = floors[key].length;
-            var outerWidthRatio = Math.floor(currentRoomCount / totalRoomCount * 10000) / 100 + '%';
-            var innerWidthRatio = Math.floor(1 / currentRoomCount * 10000) / 100 + '%';
             var rooms = floors[key].map((room, index) => {
                 return (
                     <RoomType
                         key={`${room.floor}-${index}`}
                         name={room.name}
                         alias={room.alias}
-                        widthRatio={innerWidthRatio}
                     />
                 );
             });
 
             return (
-                <div key={key} className="room-types__inner" style={{width: outerWidthRatio}}>
+                <div key={key} className="room-types__inner" style={{width: `${currentRoomCount * 200}px`}}>
                     <h3 className="room-types__floor">{key}층</h3>
                     <ul className="room-types__list">{rooms}</ul>
                 </div>
@@ -44,7 +41,7 @@ class RoomTypes extends React.Component {
         });
 
         return (
-            <div className="room-types">
+            <div className="room-types" style={{width: `${totalRoomCount * 200}px`}}>
                 <h2 className="blind">회의실 목록</h2>
                 {cols}
             </div>
