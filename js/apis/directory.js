@@ -8,7 +8,7 @@ const directory = {
         return new Promise((resolve) => {
             gapi.client.directory.users.list({
                 customer: 'my_customer',
-                maxResults: 100,
+                maxResults: 500,
                 orderBy: 'email',
                 viewType: 'domain_public'
             }).execute((directory) => {
