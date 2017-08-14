@@ -134,7 +134,7 @@ class ModalReservation extends React.Component {
             start: datas.start,
             end: datas.end
         }).then(() => {
-            return this.ajaxer.updateEvents();
+            return this.ajaxer.updateEvents(this.props.date);
         });
     }
 

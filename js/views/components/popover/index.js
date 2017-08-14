@@ -215,7 +215,7 @@ class Popover extends React.Component {
         dispatch({type: ACTIONS.LOADING_MODE, value: true});
 
         this.ajaxer.events.removeBy(event.get('id')).then(() => {
-            return this.ajaxer.updateEvents();
+            return this.ajaxer.updateEvents(this.props.date);
         });
     }
 }
