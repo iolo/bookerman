@@ -20,8 +20,8 @@ const events = {
      * @returns {Promise}
      */
     findAll(datetime) {
-        var timeMin = moment(datetime).set({hour: 9, minutes: 0}).format();
-        var timeMax = moment(datetime).set({hour: 23, minutes: 59}).format();
+        var timeMin = moment(datetime).set({hour: config.TIME_TERM.START, minutes: 0}).format();
+        var timeMax = moment(datetime).set({hour: config.TIME_TERM.END, minutes: 59}).format();
 
         return new Promise((resolve) => {
             gapi.client.calendar.events.list({
