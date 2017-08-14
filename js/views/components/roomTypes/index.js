@@ -13,10 +13,11 @@ class RoomTypes extends React.Component {
         const totalRoomCount = this.props.rooms.length;
 
         this.props.rooms.forEach((room) => {
-            if (floors[room.floor]) {
-                floors[room.floor].push(room);
+            const floor = room.floor + '층';
+            if (floors[floor]) {
+                floors[floor].push(room);
             } else {
-                floors[room.floor] = [room];
+                floors[floor] = [room];
             }
         });
 
@@ -34,7 +35,7 @@ class RoomTypes extends React.Component {
 
             return (
                 <div key={key} className="room-types__inner" style={{width: `${currentRoomCount * 200}px`}}>
-                    <h3 className="room-types__floor">{key}층</h3>
+                    <h3 className="room-types__floor">{key}</h3>
                     <ul className="room-types__list">{rooms}</ul>
                 </div>
             );
